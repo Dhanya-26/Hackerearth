@@ -1,0 +1,311 @@
+/* .container-fluid-sm h1{
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
+} */
+
+.container-fluid-sm{
+    background-color: black; 
+    padding-top:60px; 
+    padding-bottom: 90px; 
+    padding-left: 60px;
+}
+
+.container-fluid-sm h1{
+    font-weight: bold; 
+    font-size: 100px;
+}
+
+.content
+{
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background-color: #1fb650;
+    height: 525px;
+    padding-top: 15.5rem;
+    justify-content: center;
+}
+
+.text{
+    color: #fff;
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: .025rem;
+
+}
+
+.span{
+    display: table;
+    margin-top: 1.5rem;
+    background-color: #68e090;
+    height: 7px;
+    width:80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hashtags{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: -.025rem;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: -1;
+    white-space: nowrap;
+    width: 100%;
+    height: auto;
+}
+
+.hashtags li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    opacity: .32;
+    text-align: left;
+    
+}
+
+.hashtags li a{
+    text-decoration: none;
+    color: #008951;
+}
+
+/* START OF DYNAMIC BACKGRD OF GREEN CONTENT*/
+.hashtags{
+    overflow: hidden;
+}
+
+.tags {
+	top: 0;
+	left: 0; 
+	width: 100%; 
+	height: 100%;
+	overflow: hidden;
+}
+
+.tags li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 25px;
+	height: 25px;
+	animation: animate 17s linear infinite;
+	bottom: 0px;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0px);
+		opacity: 1;
+    }
+    
+	100% {
+		transform: translateY(-800px);
+		opacity: 1;
+	}
+} 
+/* END OF DYNAMIC BACKGRD OF GREEN CONTENT*/
+
+
+/* FOOTER */
+
+/* FOOTER BORDER USING TRANSITION ON HOVER */
+.footer1{
+    border: 14px solid black;
+    background-color: black; 
+    height: 450px;
+}
+
+.footer1:hover{
+    border: 14px solid  rgb(241,170,49);
+    transition-property: all;
+    transition-delay: 0s;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+/* FOOTER BORDER USING TRANSITION ON HOVER */
+
+.foot{
+    padding: 0 10vw 130px;
+}
+
+.foot h2{
+    color: white; 
+    font-size:50px; 
+    margin: 0 auto 10vw;
+}
+
+.btn{
+    color: black;
+    display: inline-block;
+    font-family: Larsseit-Regular,sans-serif;
+    background: #f5f5f5;
+    border-radius: 3px;
+    border: 1px solid #f5f5f5;
+    cursor: pointer;
+    padding: .8em 1em .7em;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.btn:hover{
+    color: white;
+    background-color: black;
+    border: 1px solid rgb(73, 73, 73);
+    transition-property: background-color, border;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.btn p::before {
+    position: absolute;
+    content: attr(data-content); 
+    top: 10;
+    left: 0;
+    color:  rgb(241,170,49);
+    /* text-decoration: underline; */
+    overflow: hidden;
+    transition: width 250ms linear;
+  }
+
+.btn p::before {
+    width: 0;
+    white-space: nowrap;
+  }
+  
+.btn p:hover::before {
+    width: 100%;
+  }
+
+.foot1{
+    bottom: 52px;
+    padding-left: 52px;
+    padding-right: 52px;
+    position: relative;
+    z-index: 10;
+}
+
+.foot1-main a{
+    text-decoration: none;
+    display: inline-block;
+    color: #dce6e6;
+    letter-spacing: .05em;
+    margin-right: 24px;
+    font-size: 15px;
+}
+
+
+.social{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    
+}
+
+.social-link{
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.social-link a{
+    color: white;
+    /* float: right; */
+    opacity: .7;
+}
+
+.social-link a i{
+    size: 30px;
+   padding: 10px;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 835px)
+{
+    .footer1{
+        height: 520px;
+    }
+}
+
+@media (max-width: 700px)
+{
+   .foot h2{
+      padding-top: 50px;
+      font-size: 30px;
+   }
+
+   .footer1{
+       justify-content: center;
+        height: 580px;
+   }
+
+   .foot, .foot1-main{
+       text-align: center;
+   }
+
+   .foot1-main a{
+       margin-right: 10px;
+   }
+
+   .social{
+       position: relative;
+       right: 0px;
+   }
+   .social-link{
+       display: flex;
+       justify-content: center;
+   }
+
+   .p{
+       text-align: center;
+   }
+
+   .btn{
+       margin: 40px auto 40px auto;
+   }
+}
+
+@media (min-width: 935px){
+    .footer1{
+        height: 500px;
+    }
+}
+
+@media (max-width:763px){
+    
+.container-fluid-sm h1{
+    font-weight: bold; 
+    font-size: 70px;
+}
+}
+
+@media (max-width:575px){
+    .container-fluid-sm h1{
+        font-weight: bold; 
+        font-size: 60px;
+    }
+}
+
+@media (max-width:509px){
+    .container-fluid-sm h1{
+        font-weight: bold; 
+        font-size: 50px;
+    }
+}
+
+@media (max-width:409px){
+
+    .container-fluid-sm{
+        padding-left: 20px;
+    }
+}
